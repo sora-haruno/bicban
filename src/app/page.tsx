@@ -59,7 +59,7 @@ const sections: ProductSection[] = [
         name: "バスキャリー",
         isPhoto: true,
         types: ["リクライニング", "チルト", "フラット"],
-        imageUrls: ["/img/reclining.jpg", "/img/tilt.jpg", "/img/flat.jpg"],
+        imageUrls: ["/reclining.jpg", "/tilt.jpg", "/flat.jpg"],
         detail: "ご利用者の姿勢に合わせて選べる3タイプを展開。ステンレス製で清潔に保てます。"
       },
       {
@@ -244,7 +244,7 @@ export default function Home() {
         >
           {/* 画像パスは適宜調整してください（例: /images/lift1.jpg） */}
           <img
-            src="/img/lift1.jpg"
+            src="/lift1.jpg"
             alt="天井走行式リフト利用風景"
             className="w-full h-full object-cover object-[center_40%]"
           />
