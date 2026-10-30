@@ -188,14 +188,10 @@ export default function Home() {
           </button>
 
         </div>
-        <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-4 px-6">
-          <p className="text-sm md:text-base font-medium tracking-wide text-center md:text-left">
-            &copy; 2026 株式会社ビック・バン. All rights reserved.
-          </p>
-        </div>
       </nav>
-      {/* --- HERO --- */}
-      <section id="hero" className="min-h-screen w-full relative overflow-hidden flex flex-col justify-center">
+{/* --- HERO --- */}
+      {/* justify-center を外し、スマホでは pt-20（上寄り）、PCでは pt-28 や md:justify-center でバランスを取る */}
+      <section id="hero" className="min-h-screen w-full relative overflow-hidden flex flex-col justify-start md:justify-center pt-60 md:pt-25">
         {/* 背景4分割グラデーション */}
         <div className="absolute inset-0 flex flex-col pointer-events-none z-0">
           {[
@@ -214,25 +210,31 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="relative z-10 px-8 max-w-6xl mx-auto w-full pt-12">
-          <p className="text-xl font-bold text-sky-700 tracking-[0.4em] mb-4 uppercase">株式会社 ビック・バン</p>
-          <h2 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter text-slate-900 leading-tight">
+        {/* テキストコンテンツ：スマホの pb-36 で下部固定ナビとの被りを防ぐ */}
+        <div className="relative z-10 px-6 md:px-8 max-w-6xl mx-auto w-full pb-36 md:pb-0">
+          <p className="text-sm md:text-xl font-bold text-sky-700 tracking-[0.3em] md:tracking-[0.4em] mb-10 uppercase">
+            株式会社 ビック・バン
+          </p>
+          <h2 className="text-4xl sm:text-5xl md:text-8xl font-black mb-10 md:mb-8 tracking-tighter text-slate-900 leading-tight">
             住まいをキズつけない<br />
             <span className="text-sky-500">快適介護リフト</span>
           </h2>
-          <div className="flex items-center gap-3 bg-white/40 backdrop-blur-md w-fit px-5 py-2.5 rounded-full border border-white/50">
-            <Heart className="w-4 h-4 fill-sky-500 text-sky-500" />
-            <p className="font-bold text-sky-600 tracking-widest uppercase font-mono">
-              東京都２３区、郊外にお住まいの方は助成制度により取り付けができます
+          <div className="flex items-center gap-2.5 md:gap-3 bg-white/60 backdrop-blur-md w-fit px-4 md:px-5 py-2 md:py-2.5 rounded-full border border-white/60 shadow-sm">
+            <Heart className="w-4 h-4 fill-sky-500 text-sky-500 shrink-0" />
+            <p className="text-xs md:text-sm font-bold text-sky-700 tracking-wider">
+              東京都23区・郊外にお住まいの方は助成制度により取り付けができます
             </p>
           </div>
+          <div className="w-full flex justify-center">
+          <ArrowDown className="w-16 h-16 md:w-18 md:h-18 text-sky-500 mt-10 animate-bounce" />
+        </div>
         </div>
       </section>
 
       {/* --- CONCEPT / MESSAGE SECTION --- */}
       <section
         id="concept"
-        className="min-h-screen w-full snap-start relative overflow-hidden flex flex-col justify-end bg-slate-900"
+        className="min-h-screen w-full relative overflow-hidden flex flex-col justify-end bg-slate-900"
       >
         {/* 背景画像：スマホの縦長比率にぴったりフィットさせてズーム演出 */}
         <motion.div
@@ -280,13 +282,13 @@ export default function Home() {
             {/* 小さなポイントアイコン列 */}
             <div className="grid grid-cols-3 gap-2 mt-5 pt-4 border-t border-slate-200/60 text-center">
               <div>
-                <p className="text-x font-black text-slate-700">簡単ボタン</p>
+                <p className="font-black text-slate-700">簡単ボタン</p>
               </div>
               <div className="border-x border-slate-200/60">
-                <p className="text-x font-black text-slate-700">防水・安心構造</p>
+                <p className="font-black text-slate-700">防水・安心構造</p>
               </div>
               <div>
-                <p className="text-x font-black text-sky-600">ビス打ち不要</p>
+                <p className="font-black text-sky-600">ビス打ち不要</p>
               </div>
             </div>
           </motion.div>
@@ -384,16 +386,24 @@ export default function Home() {
                 <img src="/img/FAX.png" alt="FAX" />
               </div>
             </div>
-            <button className="w-full max-w-sm bg-sky-500 text-white p-8 rounded-[2rem] font-black text-xl shadow-2xl flex items-center justify-between px-10 active:scale-95 transition-all">
+            <button className="w-full max-w-sm bg-sky-500 text-white p-8 rounded-[2rem] font-black text-xl shadow-2xl flex items-center justify-between px-10 active:scale-95 transition-all" onClick={() => window.open('https://www.bicban.net/catalog.pdf', '_blank')}>
               <span>総合カタログ (PDF)</span>
               <FileText className="w-8 h-8" />
             </button>
           </div>
-          <div className="hidden md:flex h-[500px] w-full bg-slate-50 rounded-[4rem] items-center justify-center border-8 border-slate-50 shadow-inner">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.8282213067656!2d139.6942712854299!3d35.5721827676127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018600902ac07e9%3A0xaf5ebfa7427b0800!2z44CSMTQ2LTAwODMg5p2x5Lqs6YO95aSn55Sw5Yy65Y2D6bOl77yR5LiB55uu77yR77yX4oiS77yW!5e0!3m2!1sja!2sjp!4v1793359851469!5m2!1sja!2sjp"></iframe>
+          <div className="hidden md:flex">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202.8282213067656!2d139.6942712854299!3d35.5721827676127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018600902ac07e9%3A0xaf5ebfa7427b0800!2z44CSMTQ2LTAwODMg5p2x5Lqs6YO95aSn55Sw5Yy65Y2D6bOl77yR5LiB55uu77yR77yX4oiS77yW!5e0!3m2!1sja!2sjp!4v1793359851469!5m2!1sja!2sjp" className="w-full h-[500px] rounded-[1rem] shadow-xl" ></iframe>
           </div>
         </div>
       </section>
+      {/* --- FOOTER (コピーライト) --- */}
+      <footer className="w-full bg-slate-100 border-t border-slate-200 py-8 pb-40 md:pb-40 text-center text-slate-500 text-xs md:text-sm">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="tracking-wide">
+            &copy; 2026 株式会社ビック・バン. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
