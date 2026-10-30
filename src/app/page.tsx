@@ -37,8 +37,8 @@ const sections: ProductSection[] = [
     label: "天井走行式",
     category: "天井走行式リフト",
     items: [
-      { name: "バスケアリフト", youtubeId: "5WOLvvlLieU", detail: "浴室での介助に特化したフラッグシップモデル。" },
-      { name: "ホームケアリフト", youtubeId: "qIJC7gorIgE", detail: "居室での移動をスムーズにする家庭用モデル。" }
+      { name: "バスケアリフト", youtubeId: "5WOLvvlLieU", detail: "１６００ｘ９００等の狭い浴室から２メートルを超える広い浴室まで対応致します。手元スイッチで上下、左右が電動移動し、前後に手動移動します。吊り具はバスキャリー（動画）、トイレキャリー、スリングシートなど状態に合わせて多様に選べます。" },
+      { name: "ホームケアリフト", youtubeId: "qIJC7gorIgE", detail: "壁の張りや家具に合わせて柱の位置を設定出来ます。手元スイッチで上下、左右が電動移動し、前後に手動移動します。（お一人での移乗最適なレール固定タイプもあります。）" }
     ]
   },
   {
@@ -46,8 +46,8 @@ const sections: ProductSection[] = [
     label: "移動用",
     category: "移動式リフト",
     items: [
-      { name: "B・Bレボル", youtubeId: "JS_zwS9TUUg", detail: "小回りのきく電動昇降式移動リフト。" },
-      { name: "走行式リフト ベンリー", youtubeId: "fY7yxA8X-w8", detail: "安定感抜群の走行性能を誇るスタンダードモデル。" }
+      { name: "B・Bレボル", youtubeId: "JS_zwS9TUUg", detail: "玄関、室内、トイレ、浴室など設置方法は多種多様で設置場所を選びません。設置した柱を軸に最大６メートルの移動が可能です。（ご覧の動画は上記の最大のタイプを使用しております。）操作は上昇、下降のみが電動で、移動は手動となります。設置方法は「アンカーで固定する方式」からビス類を壁等に一切使用しない「突っ張り方式」など様々です。賃貸物件においても安心してご使用いただけます。" },
+      { name: "走行式リフト ベンリー", youtubeId: "fY7yxA8X-w8", detail: "車、ベッド、車いすへの移乗、吊具を変えて床からの吊り上げもでき、電動脚部アームの開閉により吊り上げ状態での狭い廊下移動やトイレへの移乗が可能です。軽量でコンパクトに折り畳めるので手軽に持ち運びができ、全国への配送や、車に載せて旅先使用もできます。場所をとらないので居室に専用収納スペースも不要です。" }
     ]
   },
   {
@@ -59,14 +59,14 @@ const sections: ProductSection[] = [
         name: "バスキャリー",
         isPhoto: true,
         types: ["リクライニング", "チルト", "フラット"],
-        imageUrls: ["/reclining.jpg", "/tilt.jpg", "/flat.jpg"],
-        detail: "ご利用者の姿勢に合わせて選べる3タイプを展開。ステンレス製で清潔に保てます。"
+        imageUrls: ["/img/reclining.jpg", "/img/tilt.jpg", "/img/flat.jpg"],
+        detail: "使用する方の状態に合わせてお選び頂けます。イスとキャリア部分は分離します。イス型タイプの吊り具で使用者が一人で安全にご入浴できます。"
       },
       {
         name: "トイレキャリー",
         isPhoto: true,
         imageUrls: ["/img/toilet.jpg"],
-        detail: "トイレへの移乗と排泄をサポートする専用設計。小回りがきき、ご家庭のトイレでも使用可能です。"
+        detail: "お風呂での入浴介助時にご使用いただけます。 また、既存のトイレにそのままはめ込み、ご使用いただけます。４輪キャスターでその場旋回が可能、小回りが利きます。イスとキャリア部分は分離します。イス型タイプの吊り具で使用者が一人で安全にご入浴できます。"
       }
     ]
   },
@@ -244,7 +244,7 @@ export default function Home() {
         >
           {/* 画像パスは適宜調整してください（例: /images/lift1.jpg） */}
           <img
-            src="/lift1.jpg"
+            src="/img/lift1.jpg"
             alt="天井走行式リフト利用風景"
             className="w-full h-full object-cover object-[center_40%]"
           />
