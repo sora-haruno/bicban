@@ -59,13 +59,13 @@ const sections: ProductSection[] = [
         name: "バスキャリー",
         isPhoto: true,
         types: ["リクライニング", "チルト", "フラット"],
-        imageUrls: ["/img/reclining.jpg", "/img/tilt.jpg", "/img/flat.jpg"],
+        imageUrls: ["/img/reclining.JPG", "/img/tilt.JPG", "/img/flat.JPG"],
         detail: "使用する方の状態に合わせてお選び頂けます。イスとキャリア部分は分離します。イス型タイプの吊り具で使用者が一人で安全にご入浴できます。"
       },
       {
         name: "トイレキャリー",
         isPhoto: true,
-        imageUrls: ["/img/toilet.jpg"],
+        imageUrls: ["/img/toilet.JPG"],
         detail: "お風呂での入浴介助時にご使用いただけます。 また、既存のトイレにそのままはめ込み、ご使用いただけます。４輪キャスターでその場旋回が可能、小回りが利きます。イスとキャリア部分は分離します。イス型タイプの吊り具で使用者が一人で安全にご入浴できます。"
       }
     ]
@@ -244,7 +244,7 @@ export default function Home() {
         >
           {/* 画像パスは適宜調整してください（例: /images/lift1.jpg） */}
           <img
-            src="/img/lift1.jpg"
+            src="/img/lift1.JPG"
             alt="天井走行式リフト利用風景"
             className="w-full h-full object-cover object-[center_40%]"
           />
@@ -330,7 +330,7 @@ export default function Home() {
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                      {(item.imageUrls || (item.isPhoto ? ["/img/default.jpg"] : ["製品写真"])).map((url, i) => (
+                      {(item.imageUrls || (item.isPhoto ? ["/img/default.JPG"] : ["製品写真"])).map((url, i) => (
                         <div key={i} className="bg-white border border-slate-100 flex flex-col items-center justify-center p-6 shadow-sm">
                           <img src={url} alt={item.name} className="w-full h-full object-cover rounded-md" />
                         </div>
